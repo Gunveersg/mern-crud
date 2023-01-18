@@ -168,7 +168,7 @@ const UpdateForm = () => {
       <input 
         type="number" 
         onChange={(e) => {
-            if(e.target.value.match("^[0-9]{1,3}$")!=null || e.target.value<100 ||e.target.value>0) {
+            if(e.target.value.match("^[0-9]{1,3}$")!=null && (e.target.value<=100 &&e.target.value>=0)||e.target.value=='') {
                 setAgeErr(false) 
                 setAge(e.target.value)
               }
